@@ -2,7 +2,7 @@ import java.util.Date;
 
 public class EventDetails {
 
-    uint32 eventId;
+    int eventId;
     String eventHeading;
     String eventDescription;
     String organizerName;
