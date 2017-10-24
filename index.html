@@ -21,10 +21,11 @@
     function submitform(){
         alert("Sending Json");
         var formData = JSON.stringify($("#eventCreateForm").serializeArray());
+        myFunction();
     </script>
 </head>
 <body>
-    <form action="create_event" method="POST" name="eventCreateForm">
+    <form action="http://hangouts.cisco.com/events" method="POST" name="eventCreateForm">
         <p><label for="event_name">Event Name:</label>
             <input type="text" name="first_name" id="fname"></p>
 
