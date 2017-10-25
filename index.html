@@ -15,12 +15,25 @@
             });
         }
     </script>
+
+    <script type="text/javascript">
+    // Script to submit the form (in JSON)
+    function submitform(){
+        alert("Sending Json");
+        var formData = JSON.stringify($("#eventCreateForm").serializeArray());
+        myFunction();
+    </script>
 </head>
 <body>
+    <form action="http://hangouts.cisco.com/events" method="POST" name="eventCreateForm">
+        <p><label for="event_name">Event Name:</label>
+            <input type="text" name="first_name" id="fname"></p>
 
-    <p>Click the button to trigger a function.</p>
+        <p><label for="event_details">Event Details:</label>
+            <input type="text" name="last_name" id="lname"></p>
 
-    <button onclick="myFunction()">Click me</button>
+        <input value="Create Event" type="submit" onclick="submitform()">
+    </form>
 
     <p id="demo"></p>    
 </body>
